@@ -73,7 +73,7 @@
 
 ## 版本更新
 
-* 0.0.0：项目初始化
-* 0.0.1：集成Spring Cloud & Alibaba
-* 0.0.2：集成Nacos
-* 0.0.3：集成Swagger
+* v0.0.0：项目初始化
+* v0.0.1：集成Spring Cloud & Alibaba
+* v0.0.2：集成Nacos
+* v0.0.3：集成Swagger
