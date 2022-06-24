@@ -7,7 +7,7 @@
     <groupId>com.roc</groupId>
     <artifactId>cloud-demo</artifactId>
     <packaging>pom</packaging>
-    <version>0.0.4</version>
+    <version>0.0.5</version>
 
     <name>cloud-demo</name>
     <url>https://github.com/HaibaraPeng/cloud-demo</url>
@@ -21,7 +21,7 @@
     </modules>
 
     <properties>
-        <demo.version>0.0.4</demo.version>
+        <demo.version>0.0.5</demo.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
         <java.version>1.8</java.version>
@@ -30,6 +30,7 @@
         <spring-cloud-alibaba.version>2021.0.1.0</spring-cloud-alibaba.version>
         <alibaba.nacos.version>2.0.4</alibaba.nacos.version>
         <alibaba.seata.version>1.5.1</alibaba.seata.version>
+        <hutool.version>5.8.3</hutool.version>
     </properties>
 
     <dependencies>
@@ -82,6 +83,12 @@
                 <version>${spring-boot.version}</version>
                 <type>pom</type>
                 <scope>import</scope>
+            </dependency>
+            <!-- hutool工具包 -->
+            <dependency>
+                <groupId>cn.hutool</groupId>
+                <artifactId>hutool-all</artifactId>
+                <version>${hutool.version}</version>
             </dependency>
             <!-- common核心模块 -->
             <dependency>

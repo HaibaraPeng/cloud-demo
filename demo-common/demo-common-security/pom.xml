@@ -3,22 +3,24 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <parent>
-        <artifactId>cloud-demo</artifactId>
+        <artifactId>demo-common</artifactId>
         <groupId>com.roc</groupId>
         <version>0.0.5</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <modules>
-        <module>demo-modules-system</module>
-    </modules>
-
-    <artifactId>demo-modules</artifactId>
-    <packaging>pom</packaging>
+    <artifactId>demo-common-security</artifactId>
 
     <description>
-        demo-modules业务模块
+        demo-common-security安全模块
     </description>
 
+    <dependencies>
+        <!-- Demo Common Core-->
+        <dependency>
+            <groupId>com.roc</groupId>
+            <artifactId>demo-common-core</artifactId>
+        </dependency>
+    </dependencies>
 
 </project>

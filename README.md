@@ -70,7 +70,7 @@
 - [x] v0.0.1：集成Spring Cloud & Alibaba
 - [x] v0.0.2：集成Nacos
 - [x] v0.0.3：集成Gateway
-- [ ] v0.0.4：集成认证
-- [ ] v0.0.5：集成Openfeign
+- [x] v0.0.4：集成认证
+- [x] v0.0.5：集成Openfeign
 - [ ] v0.0.6：集成Actuator
 - [ ] v0.0.7：集成Swagger
