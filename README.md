@@ -34,22 +34,15 @@
 
 ### **2、主框架**
 
-- Spring Boot 2.3.x
-- Spring Cloud Hoxton.SR9
-- Spring Framework 5.2.x
-- Spring Security 5.2.x
+- Spring Boot 2.6.x
+- Spring Cloud 2021.0.1
+- Spring Cloud Alibaba 2021.0.1.0
 
 ### **3、持久层**
 
 - Apache MyBatis 3.5.x
 - Hibernate Validation 6.0.x
 - Alibaba Druid 1.2.x
-
-### **4、视图层**
-
-- Vue 2.6.x
-- Axios 0.21.0
-- Element 2.14.x
 
 ## 内置功能
 
