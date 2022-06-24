@@ -6,7 +6,7 @@
 
     <groupId>com.roc</groupId>
     <artifactId>cloud-demo</artifactId>
-    <version>0.0.1</version>
+    <version>0.0.2</version>
 
     <name>cloud-demo</name>
     <url>https://github.com/HaibaraPeng/cloud-demo</url>
@@ -18,7 +18,7 @@
     </modules>
 
     <properties>
-        <demo.version>0.0.1</demo.version>
+        <demo.version>0.0.2</demo.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
         <java.version>1.8</java.version>
