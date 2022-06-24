@@ -1,4 +1,4 @@
-package com.roc.modules.system;
+package com.roc.demo.modules.system;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

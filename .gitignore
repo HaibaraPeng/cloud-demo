@@ -25,4 +25,5 @@ hs_err_pid*
 .idea
 *.iml
 demo-modules/*/target
+demo-gateway/target
 

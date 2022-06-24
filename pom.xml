@@ -6,6 +6,7 @@
 
     <groupId>com.roc</groupId>
     <artifactId>cloud-demo</artifactId>
+    <packaging>pom</packaging>
     <version>0.0.3</version>
 
     <name>cloud-demo</name>
@@ -15,6 +16,7 @@
     <modules>
         <module>demo-common</module>
         <module>demo-modules</module>
+        <module>demo-gateway</module>
     </modules>
 
     <properties>
