@@ -17,6 +17,7 @@
         <module>demo-common</module>
         <module>demo-modules</module>
         <module>demo-gateway</module>
+        <module>demo-auth</module>
     </modules>
 
     <properties>
