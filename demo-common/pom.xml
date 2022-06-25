@@ -12,6 +12,7 @@
     <modules>
         <module>demo-common-core</module>
         <module>demo-common-security</module>
+        <module>demo-common-swagger</module>
     </modules>
 
     <artifactId>demo-common</artifactId>

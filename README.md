@@ -74,7 +74,7 @@
 - [x] v0.0.4：集成认证
 - [x] v0.0.5：集成Openfeign
 - [x] v0.0.6：集成Actuator
-- [ ] v0.0.7：集成Swagger
+- [x] v0.0.7：集成Swagger
 
 * v0.1.X：代码生成
 
