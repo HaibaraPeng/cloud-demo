@@ -3,23 +3,23 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <parent>
-        <artifactId>cloud-demo</artifactId>
+        <artifactId>demo-visual</artifactId>
         <groupId>com.roc</groupId>
         <version>0.0.6</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>demo-gateway</artifactId>
+    <artifactId>demo-visual-monitor</artifactId>
 
     <description>
-        demo-gateway网关模块
+        demo-visual-monitor监控中心
     </description>
 
     <dependencies>
-        <!-- SpringCloud Gateway -->
+        <!-- SpringBoot Admin -->
         <dependency>
-            <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-starter-gateway</artifactId>
+            <groupId>de.codecentric</groupId>
+            <artifactId>spring-boot-admin-starter-server</artifactId>
         </dependency>
         <!-- SpringCloud Alibaba Nacos -->
         <dependency>
@@ -31,15 +31,20 @@
             <groupId>com.alibaba.cloud</groupId>
             <artifactId>spring-cloud-starter-alibaba-nacos-config</artifactId>
         </dependency>
-        <!-- SpringCloud Loadbalancer -->
+        <!-- SpringCloud Alibaba Sentinel -->
         <dependency>
-            <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-loadbalancer</artifactId>
+            <groupId>com.alibaba.cloud</groupId>
+            <artifactId>spring-cloud-starter-alibaba-sentinel</artifactId>
         </dependency>
-        <!-- SpringBoot Actuator -->
+        <!-- SpringBoot Web -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-actuator</artifactId>
+            <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
+        <!-- Spring Security -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-security</artifactId>
         </dependency>
     </dependencies>
 

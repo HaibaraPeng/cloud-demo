@@ -27,4 +27,5 @@ hs_err_pid*
 demo-modules/*/target
 demo-gateway/target
 demo-auth/target
+demo-visual/*/target
 
