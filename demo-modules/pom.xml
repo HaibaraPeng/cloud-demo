@@ -11,6 +11,7 @@
 
     <modules>
         <module>demo-modules-system</module>
+        <module>demo-modules-generate</module>
     </modules>
 
     <artifactId>demo-modules</artifactId>
