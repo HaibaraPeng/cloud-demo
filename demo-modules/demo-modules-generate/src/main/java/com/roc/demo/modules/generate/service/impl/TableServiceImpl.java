@@ -8,7 +8,9 @@ import com.roc.demo.common.core.dto.generate.db.DbListDTO;
 import com.roc.demo.common.core.dto.generate.table.TableImportDTO;
 import com.roc.demo.common.core.vo.generate.db.DbListVO;
 import com.roc.demo.modules.generate.domain.Table;
+import com.roc.demo.modules.generate.domain.TableColumn;
 import com.roc.demo.modules.generate.mapper.TableMapper;
+import com.roc.demo.modules.generate.service.TableColumnService;
 import com.roc.demo.modules.generate.service.TableService;
 import com.roc.demo.modules.generate.utils.GenerateUtils;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -28,6 +30,9 @@ public class TableServiceImpl extends ServiceImpl<TableMapper, Table> implements
     @Autowired
     private GenerateUtils generateUtils;
 
+    @Autowired
+    private TableColumnService tableColumnService;
+
 
     @Override
     public Page<DbListVO> getDbList(DbListDTO dto) {
@@ -42,16 +47,17 @@ public class TableServiceImpl extends ServiceImpl<TableMapper, Table> implements
         String userId = "1";
         try {
             List<Table> tableList = new ArrayList<>();
+            List<TableColumn> tableColumnList = new ArrayList<>();
             for (TableImportDTO dto : dtoList) {
                 String tableName = dto.getTableName();
                 Table table = generateUtils.initTable(dto, userId);
                 tableList.add(table);
                 // 保存列信息
-//                List<GenTableColumn> genTableColumns = genTableColumnMapper.selectDbTableColumnsByName(tableName);
-//                for (GenTableColumn column : genTableColumns) {
-//                    GenUtils.initColumnField(column, table);
-//                    genTableColumnMapper.insertGenTableColumn(column);
-//                }
+                List<TableColumn> tableColumns = tableColumnService.selectDbTableColumnsByName(tableName);
+                for (TableColumn column : tableColumns) {
+                    generateUtils.initColumnField(column, table);
+                    tableColumnList.add(column);
+                }
             }
         } catch (Exception e) {
             throw new BaseException("导入失败：" + e.getMessage());
