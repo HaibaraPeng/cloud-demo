@@ -7,13 +7,13 @@ import lombok.Setter;
 import java.time.LocalDateTime;
 
 /**
- * @Description GenDbListVO
+ * @Description DbListVO
  * @Author dongp
  * @Date 2022/6/27 0027 14:38
  */
 @Getter
 @Setter
-public class GenDbListVO extends BaseVO {
+public class DbListVO extends BaseVO {
 
     private static final long serialVersionUID = 1L;
 
@@ -27,13 +27,13 @@ public class GenDbListVO extends BaseVO {
      */
     private String tableComment;
 
-//    /**
-//     * 创建时间
-//     */
-//    private LocalDateTime createTime;
-//
-//    /**
-//     * 更新时间
-//     */
-//    private LocalDateTime updateTime;
+    /**
+     * 创建时间
+     */
+    private LocalDateTime createTime;
+
+    /**
+     * 更新时间
+     */
+    private LocalDateTime updateTime;
 }

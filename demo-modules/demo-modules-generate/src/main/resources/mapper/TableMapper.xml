@@ -1,11 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.roc.demo.modules.generate.mapper.GenTableMapper">
+<mapper namespace="com.roc.demo.modules.generate.mapper.TableMapper">
 
-    <select id="selectDbTableList" resultType="com.roc.demo.common.core.vo.generate.db.GenDbListVO">
+    <select id="selectDbTableList" resultType="com.roc.demo.common.core.vo.generate.db.DbListVO">
         SELECT
         table_name AS tableName,
-        table_comment AS tableComment
+        table_comment AS tableComment,
+        create_time AS createTime,
+        update_time AS updateTime
         FROM
         information_schema.TABLES
         WHERE
@@ -19,4 +21,5 @@
         </if>
         order by create_time desc
     </select>
+
 </mapper>

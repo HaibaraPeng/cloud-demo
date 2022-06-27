@@ -1,13 +1,19 @@
 package com.roc.demo.modules.generate.domain;
 
+import com.baomidou.mybatisplus.annotation.TableName;
 import com.roc.demo.common.core.base.BaseEntity;
+import lombok.Getter;
+import lombok.Setter;
 
 /**
  * @Description 业务表 gen_table
  * @Author dongp
  * @Date 2022/6/27 0027 14:00
  */
-public class GenTable extends BaseEntity {
+@Getter
+@Setter
+@TableName("gen_table")
+public class Table extends BaseEntity {
 
     private static final long serialVersionUID = 1L;
 

@@ -5,13 +5,13 @@ import lombok.Getter;
 import lombok.Setter;
 
 /**
- * @Description GenDbListDTO
+ * @Description DbListDTO
  * @Author dongp
  * @Date 2022/6/27 0027 11:43
  */
 @Getter
 @Setter
-public class GenDbListDTO extends BaseDTO {
+public class DbListDTO extends BaseDTO {
 
     private static final long serialVersionUID = 1L;
 
