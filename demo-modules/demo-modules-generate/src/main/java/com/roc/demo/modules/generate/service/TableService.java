@@ -27,7 +27,7 @@ public interface TableService extends IService<Table> {
     /**
      * 导入表结构
      *
-     * @param itemList 导入表列表
+     * @param dtoList 导入表列表
      */
-    void importTable(List<TableImportDTO.ItemDTO> itemList);
+    void importTable(List<TableImportDTO> dtoList);
 }

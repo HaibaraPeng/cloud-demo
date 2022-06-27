@@ -36,15 +36,15 @@ public class TableServiceImpl extends ServiceImpl<TableMapper, Table> implements
     }
 
     @Override
-    public void importTable(List<TableImportDTO.ItemDTO> itemList) {
+    public void importTable(List<TableImportDTO> dtoList) {
         // TODO 获取userId
 //        String operateName = SecurityUtils.getUsername();
         String userId = "1";
         try {
             List<Table> tableList = new ArrayList<>();
-            for (TableImportDTO.ItemDTO item : itemList) {
-                String tableName = item.getTableName();
-                Table table = generateUtils.initTable(item, userId);
+            for (TableImportDTO dto : dtoList) {
+                String tableName = dto.getTableName();
+                Table table = generateUtils.initTable(dto, userId);
                 tableList.add(table);
                 // 保存列信息
 //                List<GenTableColumn> genTableColumns = genTableColumnMapper.selectDbTableColumnsByName(tableName);

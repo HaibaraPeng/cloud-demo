@@ -27,13 +27,13 @@ public class GenerateUtils {
     /**
      * 初始化表信息
      */
-    public Table initTable(TableImportDTO.ItemDTO item, String userId) {
-        Table table = BeanUtil.copyProperties(item, Table.class);
-        table.setClassName(convertClassName(item.getTableName()));
+    public Table initTable(TableImportDTO dto, String userId) {
+        Table table = BeanUtil.copyProperties(dto, Table.class);
+        table.setClassName(convertClassName(dto.getTableName()));
         table.setPackageName(generateConfig.getPackageName());
         table.setModuleName(getModuleName(generateConfig.getPackageName()));
-        table.setBusinessName(getBusinessName(item.getTableName()));
-        table.setFunctionName(replaceText(item.getTableComment()));
+        table.setBusinessName(getBusinessName(dto.getTableName()));
+        table.setFunctionName(replaceText(dto.getTableComment()));
         table.setFunctionAuthor(generateConfig.getAuthor());
         table.setCreateBy(userId);
         return table;

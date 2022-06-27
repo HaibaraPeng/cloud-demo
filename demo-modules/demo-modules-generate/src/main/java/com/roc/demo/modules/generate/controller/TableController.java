@@ -2,6 +2,7 @@ package com.roc.demo.modules.generate.controller;
 
 import com.roc.demo.common.core.api.CommonResult;
 import com.roc.demo.common.core.dto.generate.table.TableImportDTO;
+import com.roc.demo.common.core.validated.ValidatedList;
 import com.roc.demo.modules.generate.service.TableService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.validation.annotation.Validated;
@@ -11,6 +12,9 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import javax.validation.Valid;
+import javax.validation.constraints.NotEmpty;
+import javax.validation.constraints.Size;
+import java.util.List;
 
 /**
  * @Description TableController
@@ -28,8 +32,8 @@ public class TableController {
      * 导入表结构
      */
     @PostMapping("/import")
-    public CommonResult importTable(@RequestBody @Validated TableImportDTO dto) {
-        tableService.importTable(dto.getItemList());
+    public CommonResult importTable(@RequestBody @Validated ValidatedList<TableImportDTO> dto) {
+        tableService.importTable(dto.getList());
         return new CommonResult().success();
     }
 }

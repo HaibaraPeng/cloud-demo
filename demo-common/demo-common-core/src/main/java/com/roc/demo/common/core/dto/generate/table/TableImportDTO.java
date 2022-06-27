@@ -17,29 +17,19 @@ import java.util.List;
  */
 @Getter
 @Setter
-public class TableImportDTO extends BaseDTO {
+public class TableImportDTO implements Serializable {
 
     private static final long serialVersionUID = 1L;
 
-    @NotEmpty(message = "导入表项目不能为空")
-    @Valid
-    private List<ItemDTO> itemList;
+    /**
+     * 表名称
+     */
+    @NotBlank(message = "表名称不能为空")
+    private String tableName;
 
-    @Getter
-    @Setter
-    public static class ItemDTO implements Serializable {
-        private static final long serialVersionUID = 1L;
-
-        /**
-         * 表名称
-         */
-        @NotBlank(message = "表名称不能为空")
-        private String tableName;
-
-        /**
-         * 表描述
-         */
-        private String tableComment;
-    }
+    /**
+     * 表描述
+     */
+    private String tableComment;
 
 }
