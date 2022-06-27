@@ -36,6 +36,7 @@
         <swagger.fox.version>3.0.0</swagger.fox.version>
         <swagger.core.version>1.6.2</swagger.core.version>
         <velocity.version>2.3</velocity.version>
+        <mybatis-plus.version>3.5.2</mybatis-plus.version>
     </properties>
 
     <dependencies>
@@ -119,6 +120,12 @@
                 <artifactId>velocity-engine-core</artifactId>
                 <version>${velocity.version}</version>
             </dependency>
+            <!--mybatis-plus-->
+            <dependency>
+                <groupId>com.baomidou</groupId>
+                <artifactId>mybatis-plus-boot-starter</artifactId>
+                <version>${mybatis-plus.version}</version>
+            </dependency>
             <!-- common核心模块 -->
             <dependency>
                 <groupId>com.roc</groupId>
@@ -129,6 +136,12 @@
             <dependency>
                 <groupId>com.roc</groupId>
                 <artifactId>demo-common-swagger</artifactId>
+                <version>${demo.version}</version>
+            </dependency>
+            <!-- common安全模块 -->
+            <dependency>
+                <groupId>com.roc</groupId>
+                <artifactId>demo-common-security</artifactId>
                 <version>${demo.version}</version>
             </dependency>
         </dependencies>
