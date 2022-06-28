@@ -64,8 +64,13 @@ public class GenerateConstants {
     /**
      * 数据库数字类型
      */
-    public static final String[] COLUMNTYPE_NUMBER = {"tinyint", "smallint", "mediumint", "int", "number", "integer",
+    public static final String[] COLUMNTYPE_NUMBER = {"smallint", "mediumint", "int", "number", "integer",
             "bigint", "float", "double", "decimal"};
+
+    /**
+     * 数据库tinyint类型
+     */
+    public static final String COLUMNTYPE_TINYINT = "tinyint";
 
     /**
      * 页面不需要编辑字段
@@ -170,6 +175,11 @@ public class GenerateConstants {
     public static final String TYPE_DATE = "Date";
 
     /**
+     * 布尔类型
+     */
+    public static final String TYPE_BOOLEAN = "Boolean";
+
+    /**
      * 模糊查询
      */
     public static final String QUERY_LIKE = "LIKE";
@@ -182,5 +192,5 @@ public class GenerateConstants {
     /**
      * 需要
      */
-    public static final String REQUIRE = "1";
+    public static final Boolean REQUIRE = true;
 }

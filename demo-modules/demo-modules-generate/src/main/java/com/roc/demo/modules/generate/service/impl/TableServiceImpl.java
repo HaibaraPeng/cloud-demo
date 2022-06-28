@@ -46,19 +46,22 @@ public class TableServiceImpl extends ServiceImpl<TableMapper, Table> implements
 //        String operateName = SecurityUtils.getUsername();
         String userId = "1";
         try {
-            List<Table> tableList = new ArrayList<>();
             List<TableColumn> tableColumnList = new ArrayList<>();
             for (TableImportDTO dto : dtoList) {
                 String tableName = dto.getTableName();
                 Table table = generateUtils.initTable(dto, userId);
-                tableList.add(table);
-                // 保存列信息
-                List<TableColumn> tableColumns = tableColumnService.selectDbTableColumnsByName(tableName);
-                for (TableColumn column : tableColumns) {
-                    generateUtils.initColumnField(column, table);
-                    tableColumnList.add(column);
+                boolean save = save(table);
+                if (save) {
+                    // 保存列信息
+                    List<TableColumn> tableColumns = tableColumnService.selectDbTableColumnsByName(tableName);
+                    for (TableColumn column : tableColumns) {
+                        column.setTableId(table.getTableId());
+                        generateUtils.initColumnField(column, table);
+                        tableColumnList.add(column);
+                    }
                 }
             }
+            tableColumnService.saveBatch(tableColumnList);
         } catch (Exception e) {
             throw new BaseException("导入失败：" + e.getMessage());
         }

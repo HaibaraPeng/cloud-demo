@@ -1,5 +1,7 @@
 package com.roc.demo.modules.generate.domain;
 
+import com.baomidou.mybatisplus.annotation.IdType;
+import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableName;
 import com.roc.demo.common.core.base.BaseEntity;
 import lombok.Getter;
@@ -22,6 +24,7 @@ public class TableColumn extends BaseEntity {
     /**
      * 编号
      */
+    @TableId(type = IdType.AUTO)
     private Long columnId;
 
     /**
@@ -57,37 +60,37 @@ public class TableColumn extends BaseEntity {
     /**
      * 是否主键（1是）
      */
-    private String isPk;
+    private Boolean isPk;
 
     /**
      * 是否自增（1是）
      */
-    private String isIncrement;
+    private Boolean isIncrement;
 
     /**
      * 是否必填（1是）
      */
-    private String isRequired;
+    private Boolean isRequired;
 
     /**
      * 是否为插入字段（1是）
      */
-    private String isInsert;
+    private Boolean isInsert;
 
     /**
      * 是否编辑字段（1是）
      */
-    private String isEdit;
+    private Boolean isEdit;
 
     /**
      * 是否列表字段（1是）
      */
-    private String isList;
+    private Boolean isList;
 
     /**
      * 是否查询字段（1是）
      */
-    private String isQuery;
+    private Boolean isQuery;
 
     /**
      * 查询方式（EQ等于、NE不等于、GT大于、LT小于、LIKE模糊、BETWEEN范围）

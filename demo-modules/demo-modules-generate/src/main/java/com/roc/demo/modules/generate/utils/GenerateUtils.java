@@ -125,7 +125,7 @@ public class GenerateUtils {
         if (arraysContains(GenerateConstants.COLUMNTYPE_STR, dataType) || arraysContains(GenerateConstants.COLUMNTYPE_TEXT, dataType)) {
             // 字符串长度超过500设置为文本域
             Integer columnLength = getColumnLength(column.getColumnType());
-            String htmlType = columnLength >= 500 || arraysContains(GenerateConstants.COLUMNTYPE_TEXT, dataType) ? GenerateConstants.HTML_TEXTAREA : GenConstants.HTML_INPUT;
+            String htmlType = columnLength >= 500 || arraysContains(GenerateConstants.COLUMNTYPE_TEXT, dataType) ? GenerateConstants.HTML_TEXTAREA : GenerateConstants.HTML_INPUT;
             column.setHtmlType(htmlType);
         } else if (arraysContains(GenerateConstants.COLUMNTYPE_TIME, dataType)) {
             column.setJavaType(GenerateConstants.TYPE_DATE);
@@ -146,48 +146,51 @@ public class GenerateUtils {
             else {
                 column.setJavaType(GenerateConstants.TYPE_LONG);
             }
+        } else if (dataType.equals(GenerateConstants.COLUMNTYPE_TINYINT)) {
+            column.setHtmlType(GenerateConstants.HTML_RADIO);
+            column.setJavaType(GenerateConstants.TYPE_BOOLEAN);
         }
 
         // 插入字段（默认所有字段都需要插入）
         column.setIsInsert(GenerateConstants.REQUIRE);
 
         // 编辑字段
-        if (!arraysContains(GenerateConstants.COLUMNNAME_NOT_EDIT, columnName) && !column.isPk()) {
+        if (!arraysContains(GenerateConstants.COLUMNNAME_NOT_EDIT, columnName) && !column.getIsPk()) {
             column.setIsEdit(GenerateConstants.REQUIRE);
         }
         // 列表字段
-        if (!arraysContains(GenConstants.COLUMNNAME_NOT_LIST, columnName) && !column.isPk()) {
-            column.setIsList(GenConstants.REQUIRE);
+        if (!arraysContains(GenerateConstants.COLUMNNAME_NOT_LIST, columnName) && !column.getIsPk()) {
+            column.setIsList(GenerateConstants.REQUIRE);
         }
         // 查询字段
-        if (!arraysContains(GenConstants.COLUMNNAME_NOT_QUERY, columnName) && !column.isPk()) {
-            column.setIsQuery(GenConstants.REQUIRE);
+        if (!arraysContains(GenerateConstants.COLUMNNAME_NOT_QUERY, columnName) && !column.getIsPk()) {
+            column.setIsQuery(GenerateConstants.REQUIRE);
         }
 
         // 查询字段类型
-        if (StringUtils.endsWithIgnoreCase(columnName, "name")) {
-            column.setQueryType(GenConstants.QUERY_LIKE);
+        if (StrUtil.endWithIgnoreCase(columnName, "name")) {
+            column.setQueryType(GenerateConstants.QUERY_LIKE);
         }
         // 状态字段设置单选框
-        if (StringUtils.endsWithIgnoreCase(columnName, "status")) {
-            column.setHtmlType(GenConstants.HTML_RADIO);
+        if (StrUtil.endWithIgnoreCase(columnName, "status")) {
+            column.setHtmlType(GenerateConstants.HTML_RADIO);
         }
         // 类型&性别字段设置下拉框
-        else if (StringUtils.endsWithIgnoreCase(columnName, "type")
-                || StringUtils.endsWithIgnoreCase(columnName, "sex")) {
-            column.setHtmlType(GenConstants.HTML_SELECT);
+        else if (StrUtil.endWithIgnoreCase(columnName, "type")
+                || StrUtil.endWithIgnoreCase(columnName, "sex")) {
+            column.setHtmlType(GenerateConstants.HTML_SELECT);
         }
         // 图片字段设置图片上传控件
-        else if (StringUtils.endsWithIgnoreCase(columnName, "image")) {
-            column.setHtmlType(GenConstants.HTML_IMAGE_UPLOAD);
+        else if (StrUtil.endWithIgnoreCase(columnName, "image")) {
+            column.setHtmlType(GenerateConstants.HTML_IMAGE_UPLOAD);
         }
         // 文件字段设置文件上传控件
-        else if (StringUtils.endsWithIgnoreCase(columnName, "file")) {
-            column.setHtmlType(GenConstants.HTML_FILE_UPLOAD);
+        else if (StrUtil.endWithIgnoreCase(columnName, "file")) {
+            column.setHtmlType(GenerateConstants.HTML_FILE_UPLOAD);
         }
         // 内容字段设置富文本控件
-        else if (StringUtils.endsWithIgnoreCase(columnName, "content")) {
-            column.setHtmlType(GenConstants.HTML_EDITOR);
+        else if (StrUtil.endWithIgnoreCase(columnName, "content")) {
+            column.setHtmlType(GenerateConstants.HTML_EDITOR);
         }
     }
 
