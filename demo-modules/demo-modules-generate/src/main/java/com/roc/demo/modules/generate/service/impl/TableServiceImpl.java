@@ -2,6 +2,7 @@ package com.roc.demo.modules.generate.service.impl;
 
 import cn.hutool.core.bean.BeanUtil;
 import cn.hutool.core.io.IoUtil;
+import cn.hutool.core.util.CharsetUtil;
 import cn.hutool.core.util.StrUtil;
 import com.baomidou.mybatisplus.core.toolkit.Wrappers;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
@@ -115,12 +116,12 @@ public class TableServiceImpl extends ServiceImpl<TableMapper, TablePO> implemen
         for (String template : templates) {
             // 渲染模板
             StringWriter sw = new StringWriter();
-            Template tpl = Velocity.getTemplate(template, Constants.UTF8);
+            Template tpl = Velocity.getTemplate(template, CharsetUtil.UTF_8);
             tpl.merge(context, sw);
             try {
                 // 添加到zip
                 zip.putNextEntry(new ZipEntry(VelocityUtils.getFileName(template, table)));
-                IOUtils.write(sw.toString(), zip, Constants.UTF8);
+                IOUtils.write(sw.toString(), zip, CharsetUtil.UTF_8);
                 IOUtils.closeQuietly(sw);
                 zip.flush();
                 zip.closeEntry();

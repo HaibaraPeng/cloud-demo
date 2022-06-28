@@ -1,5 +1,7 @@
 package com.roc.demo.common.core.base;
 
+import com.baomidou.mybatisplus.annotation.IdType;
+import com.baomidou.mybatisplus.annotation.TableId;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -16,6 +18,17 @@ import java.time.LocalDateTime;
 public class BasePO implements Serializable {
 
     private static final long serialVersionUID = 1L;
+
+    /**
+     * 编号
+     */
+    @TableId(type = IdType.ASSIGN_UUID)
+    private Long tableId;
+
+    /**
+     * 是否删除
+     */
+    private Boolean deleted;
 
     /**
      * 创建者
