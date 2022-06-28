@@ -1,20 +1,19 @@
 package com.roc.demo.modules.generate.controller;
 
+import cn.hutool.core.convert.Convert;
 import com.roc.demo.common.core.api.CommonResult;
+import com.roc.demo.common.core.dto.generate.table.TableBatchGenerateDTO;
 import com.roc.demo.common.core.dto.generate.table.TableImportDTO;
 import com.roc.demo.common.core.validated.ValidatedList;
 import com.roc.demo.modules.generate.service.TableService;
+import lombok.extern.java.Log;
+import org.apache.commons.io.IOUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.validation.annotation.Validated;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
-import javax.validation.Valid;
-import javax.validation.constraints.NotEmpty;
-import javax.validation.constraints.Size;
-import java.util.List;
+import javax.servlet.http.HttpServletResponse;
+import java.io.IOException;
 
 /**
  * @Description TableController
@@ -35,5 +34,25 @@ public class TableController {
     public CommonResult importTable(@RequestBody @Validated ValidatedList<TableImportDTO> dto) {
         tableService.importTable(dto.getList());
         return new CommonResult().success();
+    }
+
+    /**
+     * 生成代码（下载方式）
+     */
+    @GetMapping("/generateCode/{tableName}")
+    public void generateCode(HttpServletResponse response, @PathVariable("tableName") String tableName) throws IOException {
+        byte[] data = tableService.generateCode(tableName);
+        genCode(response, data);
+    }
+
+    /**
+     * 生成zip文件
+     */
+    private void genCode(HttpServletResponse response, byte[] data) throws IOException {
+        response.reset();
+        response.setHeader("Content-Disposition", "attachment; filename=\"ruoyi.zip\"");
+        response.addHeader("Content-Length", "" + data.length);
+        response.setContentType("application/octet-stream; charset=UTF-8");
+        IOUtils.write(data, response.getOutputStream());
     }
 }

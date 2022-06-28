@@ -1,12 +1,8 @@
 package com.roc.demo.modules.generate.service;
 
-import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.baomidou.mybatisplus.extension.service.IService;
-import com.roc.demo.common.core.dto.generate.db.DbListDTO;
-import com.roc.demo.common.core.dto.generate.table.TableImportDTO;
-import com.roc.demo.common.core.vo.generate.db.DbListVO;
-import com.roc.demo.modules.generate.domain.Table;
-import com.roc.demo.modules.generate.domain.TableColumn;
+import com.roc.demo.modules.generate.domain.TableColumnDO;
+import com.roc.demo.modules.generate.po.TableColumnPO;
 
 import java.util.List;
 
@@ -15,7 +11,7 @@ import java.util.List;
  * @Author dongp
  * @Date 2022/6/27 0027 13:59
  */
-public interface TableColumnService extends IService<TableColumn> {
+public interface TableColumnService extends IService<TableColumnPO> {
 
 
     /**
@@ -24,5 +20,5 @@ public interface TableColumnService extends IService<TableColumn> {
      * @param tableName 表名称
      * @return 列信息
      */
-    List<TableColumn> selectDbTableColumnsByName(String tableName);
+    List<TableColumnPO> selectDbTableColumnsByName(String tableName);
 }

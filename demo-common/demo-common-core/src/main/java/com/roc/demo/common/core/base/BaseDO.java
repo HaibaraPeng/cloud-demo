@@ -7,15 +7,13 @@ import java.io.Serializable;
 import java.time.LocalDateTime;
 
 /**
- * @Description BaseEntity
+ * @Description BasePO
  * @Author dongp
  * @Date 2022/6/27 0027 14:00
  */
 @Setter
 @Getter
-public class BaseEntity implements Serializable {
-
-    private static final long serialVersionUID = 1L;
+public class BaseDO {
 
     /**
      * 创建者

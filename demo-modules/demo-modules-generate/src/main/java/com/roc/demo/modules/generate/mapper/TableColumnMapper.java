@@ -1,13 +1,9 @@
 package com.roc.demo.modules.generate.mapper;
 
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
-import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
-import com.roc.demo.common.core.dto.generate.db.DbListDTO;
-import com.roc.demo.common.core.vo.generate.db.DbListVO;
-import com.roc.demo.modules.generate.domain.Table;
-import com.roc.demo.modules.generate.domain.TableColumn;
+import com.roc.demo.modules.generate.domain.TableColumnDO;
+import com.roc.demo.modules.generate.po.TableColumnPO;
 import org.apache.ibatis.annotations.Mapper;
-import org.apache.ibatis.annotations.Param;
 
 import java.util.List;
 
@@ -17,7 +13,7 @@ import java.util.List;
  * @Date 2022/6/27 0027 14:30
  */
 @Mapper
-public interface TableColumnMapper extends BaseMapper<TableColumn> {
+public interface TableColumnMapper extends BaseMapper<TableColumnPO> {
 
     /**
      * 根据表名称查询列信息
@@ -25,5 +21,5 @@ public interface TableColumnMapper extends BaseMapper<TableColumn> {
      * @param tableName 表名称
      * @return 列信息
      */
-    List<TableColumn> selectDbTableColumnsByName(String tableName);
+    List<TableColumnPO> selectDbTableColumnsByName(String tableName);
 }

@@ -6,8 +6,10 @@ import cn.hutool.core.util.StrUtil;
 import com.roc.demo.common.core.constant.GenerateConstants;
 import com.roc.demo.common.core.dto.generate.table.TableImportDTO;
 import com.roc.demo.modules.generate.config.GenerateConfig;
-import com.roc.demo.modules.generate.domain.Table;
-import com.roc.demo.modules.generate.domain.TableColumn;
+import com.roc.demo.modules.generate.domain.TableDO;
+import com.roc.demo.modules.generate.domain.TableColumnDO;
+import com.roc.demo.modules.generate.po.TableColumnPO;
+import com.roc.demo.modules.generate.po.TablePO;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
@@ -28,15 +30,15 @@ public class GenerateUtils {
     /**
      * 初始化表信息
      */
-    public Table initTable(TableImportDTO dto, String userId) {
-        Table table = BeanUtil.copyProperties(dto, Table.class);
+    public TablePO initTable(TableImportDTO dto, String userId) {
+        TablePO table = BeanUtil.copyProperties(dto, TablePO.class);
+        table.preCreate(userId);
         table.setClassName(convertClassName(dto.getTableName()));
         table.setPackageName(generateConfig.getPackageName());
         table.setModuleName(getModuleName(generateConfig.getPackageName()));
         table.setBusinessName(getBusinessName(dto.getTableName()));
         table.setFunctionName(replaceText(dto.getTableComment()));
         table.setFunctionAuthor(generateConfig.getAuthor());
-        table.setCreateBy(userId);
         return table;
     }
 
@@ -53,7 +55,7 @@ public class GenerateUtils {
             List<String> searchList = StrUtil.split(tablePrefix, ",");
             tableName = replaceFirst(tableName, searchList);
         }
-        return StrUtil.toCamelCase(tableName);
+        return StrUtil.upperFirst(StrUtil.toCamelCase(tableName));
     }
 
     /**
@@ -111,7 +113,7 @@ public class GenerateUtils {
     /**
      * 初始化列属性字段
      */
-    public void initColumnField(TableColumn column, Table table) {
+    public void initColumnField(TableColumnPO column, TablePO table) {
         String dataType = getDbType(column.getColumnType());
         String columnName = column.getColumnName();
         column.setTableId(table.getTableId());

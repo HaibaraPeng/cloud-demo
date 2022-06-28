@@ -1,13 +1,11 @@
-package com.roc.demo.modules.generate.domain;
+package com.roc.demo.modules.generate.po;
 
 import com.baomidou.mybatisplus.annotation.IdType;
 import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableName;
-import com.roc.demo.common.core.base.BaseEntity;
+import com.roc.demo.common.core.base.BasePO;
 import lombok.Getter;
 import lombok.Setter;
-
-import javax.validation.constraints.NotBlank;
 
 /**
  * @Description 业务表 gen_table_column
@@ -17,7 +15,7 @@ import javax.validation.constraints.NotBlank;
 @Getter
 @Setter
 @TableName("gen_table_column")
-public class TableColumn extends BaseEntity {
+public class TableColumnPO extends BasePO {
 
     private static final long serialVersionUID = 1L;
 
