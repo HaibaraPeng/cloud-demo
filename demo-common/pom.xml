@@ -5,7 +5,7 @@
     <parent>
         <artifactId>cloud-demo</artifactId>
         <groupId>com.roc</groupId>
-        <version>1.0.1</version>
+        <version>1.0.2</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
@@ -21,6 +21,7 @@
         <module>demo-common-security</module>
         <module>demo-common-swagger</module>
         <module>demo-common-bom</module>
+        <module>demo-common-feign</module>
     </modules>
 
 </project>

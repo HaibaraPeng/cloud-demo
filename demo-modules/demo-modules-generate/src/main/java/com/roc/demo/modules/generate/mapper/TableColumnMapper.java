@@ -1,9 +1,6 @@
 package com.roc.demo.modules.generate.mapper;
 
-import com.baomidou.mybatisplus.core.mapper.BaseMapper;
-import com.roc.demo.modules.generate.domain.TableColumnDO;
 import com.roc.demo.modules.generate.po.TableColumnPO;
-import org.apache.ibatis.annotations.Mapper;
 
 import java.util.List;
 
@@ -12,8 +9,7 @@ import java.util.List;
  * @Author dongp
  * @Date 2022/6/27 0027 14:30
  */
-@Mapper
-public interface TableColumnMapper extends BaseMapper<TableColumnPO> {
+public interface TableColumnMapper {
 
     /**
      * 根据表名称查询列信息

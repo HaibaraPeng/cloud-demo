@@ -1,7 +1,6 @@
 package com.roc.demo.common.core.base;
 
 import cn.hutool.core.date.DatePattern;
-import com.alibaba.fastjson2.annotation.JSONField;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -47,12 +46,10 @@ public class BaseDTO implements Serializable {
     /**
      * 创建开始时间
      */
-    @JSONField(format = DatePattern.NORM_DATE_PATTERN)
     private Date createStartDate;
 
     /**
      * 创建结束时间
      */
-    @JSONField(format = DatePattern.NORM_DATE_PATTERN)
     private Date createEndDate;
 }

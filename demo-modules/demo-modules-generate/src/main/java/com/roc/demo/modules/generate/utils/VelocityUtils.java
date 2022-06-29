@@ -3,13 +3,11 @@ package com.roc.demo.modules.generate.utils;
 import cn.hutool.core.date.DateUtil;
 import cn.hutool.core.map.MapUtil;
 import cn.hutool.core.util.StrUtil;
-import com.alibaba.fastjson2.JSON;
-import com.alibaba.fastjson2.JSONObject;
+import cn.hutool.json.JSON;
 import com.roc.demo.common.core.constant.GenerateConstants;
 import com.roc.demo.modules.generate.domain.TableColumnDO;
 import com.roc.demo.modules.generate.domain.TableDO;
 import org.apache.commons.lang3.StringUtils;
-import org.apache.velocity.VelocityContext;
 
 import java.util.ArrayList;
 import java.util.HashSet;

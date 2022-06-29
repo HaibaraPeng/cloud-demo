@@ -1,8 +1,5 @@
 package com.roc.demo.modules.generate.po;
 
-import com.baomidou.mybatisplus.annotation.IdType;
-import com.baomidou.mybatisplus.annotation.TableId;
-import com.baomidou.mybatisplus.annotation.TableName;
 import com.roc.demo.common.core.base.BasePO;
 import lombok.Getter;
 import lombok.Setter;
@@ -14,7 +11,6 @@ import lombok.Setter;
  */
 @Getter
 @Setter
-@TableName("gen_table")
 public class TablePO extends BasePO {
 
     private static final long serialVersionUID = 1L;
@@ -22,7 +18,6 @@ public class TablePO extends BasePO {
     /**
      * 编号
      */
-    @TableId(type = IdType.AUTO)
     private Long tableId;
 
     /**

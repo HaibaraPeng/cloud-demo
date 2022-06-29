@@ -1,7 +1,7 @@
 package com.roc.demo.common.swagger.annotation;
 
 import com.roc.demo.common.swagger.config.SwaggerAutoConfiguration;
-import com.roc.demo.common.swagger.config.SwaggerProperties;
+import com.roc.demo.common.swagger.support.SwaggerProperties;
 import org.springframework.boot.context.properties.EnableConfigurationProperties;
 import org.springframework.context.annotation.Import;
 

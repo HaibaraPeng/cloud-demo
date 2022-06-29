@@ -7,7 +7,7 @@
 
     <groupId>com.roc</groupId>
     <artifactId>demo-common-bom</artifactId>
-    <version>1.0.1</version>
+    <version>1.0.2</version>
     <packaging>pom</packaging>
 
     <name>demo-common-bom</name>
@@ -49,6 +49,11 @@
             <dependency>
                 <groupId>com.roc</groupId>
                 <artifactId>demo-common-swagger</artifactId>
+                <version>${demo.common.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.roc</groupId>
+                <artifactId>demo-common-security</artifactId>
                 <version>${demo.common.version}</version>
             </dependency>
             <!--web 模块-->

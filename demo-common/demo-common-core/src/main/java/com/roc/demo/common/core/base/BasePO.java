@@ -1,7 +1,5 @@
 package com.roc.demo.common.core.base;
 
-import com.baomidou.mybatisplus.annotation.IdType;
-import com.baomidou.mybatisplus.annotation.TableId;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -22,7 +20,6 @@ public class BasePO implements Serializable {
     /**
      * 编号
      */
-    @TableId(type = IdType.ASSIGN_UUID)
     private Long tableId;
 
     /**

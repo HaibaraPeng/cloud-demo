@@ -1,9 +1,5 @@
 package com.roc.demo.modules.generate.controller;
 
-import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
-import com.roc.demo.common.core.api.CommonResult;
-import com.roc.demo.common.core.dto.generate.db.DbListDTO;
-import com.roc.demo.common.core.vo.generate.db.DbListVO;
 import com.roc.demo.modules.generate.service.TableService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -23,10 +19,10 @@ public class DbController {
     /**
      * 查询数据库列表
      */
-    @PostMapping(value = "/list")
-    public CommonResult<Page<DbListVO>> list(@RequestBody DbListDTO dto) {
-        Page<DbListVO> page = tableService.getDbList(dto);
-        return new CommonResult<Page<DbListVO>>().success().data(page);
-    }
+//    @PostMapping(value = "/list")
+//    public CommonResult<Page<DbListVO>> list(@RequestBody DbListDTO dto) {
+//        Page<DbListVO> page = tableService.getDbList(dto);
+//        return new CommonResult<Page<DbListVO>>().success().data(page);
+//    }
 
 }
