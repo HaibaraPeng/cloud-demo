@@ -7,7 +7,7 @@
 
     <groupId>com.roc</groupId>
     <artifactId>demo-common-bom</artifactId>
-    <version>1.0.0</version>
+    <version>1.0.1</version>
     <packaging>pom</packaging>
 
     <name>demo-common-bom</name>
@@ -46,6 +46,11 @@
                 <artifactId>demo-common-core</artifactId>
                 <version>${demo.common.version}</version>
             </dependency>
+            <dependency>
+                <groupId>com.roc</groupId>
+                <artifactId>demo-common-swagger</artifactId>
+                <version>${demo.common.version}</version>
+            </dependency>
             <!--web 模块-->
             <dependency>
                 <groupId>org.springframework.boot</groupId>
@@ -58,6 +63,27 @@
                         <groupId>org.springframework.boot</groupId>
                     </exclusion>
                 </exclusions>
+            </dependency>
+            <!--springdoc -->
+            <dependency>
+                <groupId>org.springdoc</groupId>
+                <artifactId>springdoc-openapi-webmvc-core</artifactId>
+                <version>${springdoc.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>io.swagger.core.v3</groupId>
+                <artifactId>swagger-annotations</artifactId>
+                <version>${swagger.core.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.springdoc</groupId>
+                <artifactId>springdoc-openapi-webflux-ui</artifactId>
+                <version>${springdoc.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.springdoc</groupId>
+                <artifactId>springdoc-openapi-security</artifactId>
+                <version>${springdoc.version}</version>
             </dependency>
         </dependencies>
     </dependencyManagement>
