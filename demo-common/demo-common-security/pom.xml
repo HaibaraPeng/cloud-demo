@@ -5,7 +5,7 @@
     <parent>
         <artifactId>demo-common</artifactId>
         <groupId>com.roc</groupId>
-        <version>1.0.3</version>
+        <version>1.0.4</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
@@ -16,10 +16,33 @@
     </description>
 
     <dependencies>
-        <!-- Demo Common Core-->
+        <!--UPMS API-->
         <dependency>
             <groupId>com.roc</groupId>
-            <artifactId>demo-common-core</artifactId>
+            <artifactId>demo-upms-api</artifactId>
+        </dependency>
+        <!--common utils-->
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-commons</artifactId>
+        </dependency>
+        <!--feign 工具类-->
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-openfeign</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.security</groupId>
+            <artifactId>spring-security-oauth2-jose</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.security</groupId>
+            <artifactId>spring-security-oauth2-authorization-server</artifactId>
+            <version>${spring.authorization.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-webmvc</artifactId>
         </dependency>
     </dependencies>
 

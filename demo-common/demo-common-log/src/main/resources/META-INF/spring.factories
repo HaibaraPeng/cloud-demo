@@ -1,0 +1,4 @@
+org.springframework.boot.env.EnvironmentPostProcessor=\
+    com.roc.demo.common.log.init.ApplicationLoggerInitializer
+org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
+    com.roc.demo.common.log.LogAutoConfiguration

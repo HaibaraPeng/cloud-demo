@@ -1,2 +1,2 @@
 org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
-  com.roc.demo.common.core.config.MybatisPlusPageConfig
+    com.roc.demo.common.core.config.MybatisPlusPageConfig

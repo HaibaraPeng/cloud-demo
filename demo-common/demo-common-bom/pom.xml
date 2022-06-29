@@ -7,7 +7,7 @@
 
     <groupId>com.roc</groupId>
     <artifactId>demo-common-bom</artifactId>
-    <version>1.0.3</version>
+    <version>1.0.4</version>
     <packaging>pom</packaging>
 
     <name>demo-common-bom</name>
@@ -53,8 +53,35 @@
             </dependency>
             <dependency>
                 <groupId>com.roc</groupId>
+                <artifactId>demo-upms-api</artifactId>
+                <version>${demo.common.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.roc</groupId>
                 <artifactId>demo-common-security</artifactId>
                 <version>${demo.common.version}</version>
+            </dependency>
+            <!-- excel 导入导出 -->
+            <dependency>
+                <groupId>com.pig4cloud.excel</groupId>
+                <artifactId>excel-spring-boot-starter</artifactId>
+                <version>${excel.version}</version>
+            </dependency>
+            <!--orm 相关-->
+            <dependency>
+                <groupId>com.baomidou</groupId>
+                <artifactId>mybatis-plus-boot-starter</artifactId>
+                <version>${mybatis-plus.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.baomidou</groupId>
+                <artifactId>mybatis-plus-extension</artifactId>
+                <version>${mybatis-plus.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.baomidou</groupId>
+                <artifactId>mybatis-plus-annotation</artifactId>
+                <version>${mybatis-plus.version}</version>
             </dependency>
             <!--web 模块-->
             <dependency>

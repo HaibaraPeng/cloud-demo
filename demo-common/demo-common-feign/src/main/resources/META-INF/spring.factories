@@ -1,4 +1,4 @@
 org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
-com.roc.demo.common.feign.DemoFeignAutoConfiguration,\
-com.roc.demo.common.feign.sentinel.SentinelAutoConfiguration,\
-com.roc.demo.common.feign.sentinel.handler.GlobalBizExceptionHandler
+    com.roc.demo.common.feign.DemoFeignAutoConfiguration,\
+    com.roc.demo.common.feign.sentinel.SentinelAutoConfiguration,\
+    com.roc.demo.common.feign.sentinel.handler.GlobalBizExceptionHandler

@@ -9,16 +9,12 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <modules>
-        <module>demo-modules-system</module>
-    </modules>
-
-    <artifactId>demo-modules</artifactId>
+    <artifactId>demo-upms</artifactId>
+    <description>demo 通用用户权限管理聚合模块</description>
     <packaging>pom</packaging>
 
-    <description>
-        demo-modules业务模块
-    </description>
-
+    <modules>
+        <module>demo-upms-api</module>
+    </modules>
 
 </project>
