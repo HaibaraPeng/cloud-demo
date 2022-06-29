@@ -9,17 +9,17 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>demo-common-security</artifactId>
-
-    <description>
-        demo-common-security安全模块
-    </description>
+    <groupId>com.roc</groupId>
+    <artifactId>demo-common-datasource</artifactId>
+    <packaging>jar</packaging>
+    <description>demo 动态切换数据源</description>
 
     <dependencies>
-        <!-- Demo Common Core-->
+        <!--mybatis-->
         <dependency>
-            <groupId>com.roc</groupId>
-            <artifactId>demo-common-core</artifactId>
+            <groupId>com.baomidou</groupId>
+            <artifactId>dynamic-datasource-spring-boot-starter</artifactId>
+            <version>${dynamic-ds.version}</version>
         </dependency>
     </dependencies>
 

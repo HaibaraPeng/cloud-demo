@@ -1,4 +1,4 @@
-package com.roc.demo.common.feign.config;
+package com.roc.demo.common.feign;
 
 import com.alibaba.cloud.sentinel.feign.SentinelFeignAutoConfiguration;
 import com.alibaba.csp.sentinel.adapter.spring.webmvc.callback.BlockExceptionHandler;

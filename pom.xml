@@ -7,7 +7,7 @@
     <groupId>com.roc</groupId>
     <artifactId>cloud-demo</artifactId>
     <packaging>pom</packaging>
-    <version>1.0.2</version>
+    <version>1.0.3</version>
 
     <name>cloud-demo</name>
     <url>https://github.com/HaibaraPeng/cloud-demo</url>
