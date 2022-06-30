@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package nacos.console.model;
+package com.alibaba.nacos.console.model;
 
 /**
  * Namespace.

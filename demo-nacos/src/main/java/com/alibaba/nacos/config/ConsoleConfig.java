@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package nacos.config;
+package com.alibaba.nacos.config;
 
 import com.alibaba.nacos.core.code.ControllerMethodsCache;
 import org.springframework.beans.factory.annotation.Autowired;

@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package nacos.console.enums;
+package com.alibaba.nacos.console.enums;
 
 /**
  * the enum of namespace. 0 : Global configuration， 1 : Default private namespace ，2 :

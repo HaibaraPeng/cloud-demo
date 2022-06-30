@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package nacos.console.filter;
+package com.alibaba.nacos.console.filter;
 
 import org.springframework.web.filter.OncePerRequestFilter;
 

@@ -16,20 +16,20 @@
 
     <dependencies>
         <!--common-->
-        <dependency>
-            <groupId>com.roc</groupId>
-            <artifactId>demo-common-core</artifactId>
-        </dependency>
+<!--        <dependency>-->
+<!--            <groupId>com.roc</groupId>-->
+<!--            <artifactId>demo-common-core</artifactId>-->
+<!--        </dependency>-->
         <!--接口文档-->
-        <dependency>
-            <groupId>com.roc</groupId>
-            <artifactId>demo-common-swagger</artifactId>
-        </dependency>
+<!--        <dependency>-->
+<!--            <groupId>com.roc</groupId>-->
+<!--            <artifactId>demo-common-swagger</artifactId>-->
+<!--        </dependency>-->
         <!--数据源-->
-        <dependency>
-            <groupId>com.roc</groupId>
-            <artifactId>demo-common-datasource</artifactId>
-        </dependency>
+<!--        <dependency>-->
+<!--            <groupId>com.roc</groupId>-->
+<!--            <artifactId>demo-common-datasource</artifactId>-->
+<!--        </dependency>-->
         <!--注册中心客户端-->
         <dependency>
             <groupId>com.alibaba.cloud</groupId>
@@ -40,35 +40,35 @@
             <groupId>com.alibaba.cloud</groupId>
             <artifactId>spring-cloud-starter-alibaba-nacos-config</artifactId>
         </dependency>
-        <dependency>
-            <groupId>com.baomidou</groupId>
-            <artifactId>mybatis-plus-boot-starter</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>mysql</groupId>
-            <artifactId>mysql-connector-java</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>commons-configuration</groupId>
-            <artifactId>commons-configuration</artifactId>
-            <version>${configuration.version}</version>
-        </dependency>
+<!--        <dependency>-->
+<!--            <groupId>com.baomidou</groupId>-->
+<!--            <artifactId>mybatis-plus-boot-starter</artifactId>-->
+<!--        </dependency>-->
+<!--        <dependency>-->
+<!--            <groupId>mysql</groupId>-->
+<!--            <artifactId>mysql-connector-java</artifactId>-->
+<!--        </dependency>-->
+<!--        <dependency>-->
+<!--            <groupId>commons-configuration</groupId>-->
+<!--            <artifactId>commons-configuration</artifactId>-->
+<!--            <version>${configuration.version}</version>-->
+<!--        </dependency>-->
         <!--代码生成模板引擎-->
-        <dependency>
-            <groupId>org.apache.velocity</groupId>
-            <artifactId>velocity-engine-core</artifactId>
-            <version>${velocity.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>org.apache.velocity.tools</groupId>
-            <artifactId>velocity-tools-generic</artifactId>
-            <version>${velocity.tool.version}</version>
-        </dependency>
+<!--        <dependency>-->
+<!--            <groupId>org.apache.velocity</groupId>-->
+<!--            <artifactId>velocity-engine-core</artifactId>-->
+<!--            <version>${velocity.version}</version>-->
+<!--        </dependency>-->
+<!--        <dependency>-->
+<!--            <groupId>org.apache.velocity.tools</groupId>-->
+<!--            <artifactId>velocity-tools-generic</artifactId>-->
+<!--            <version>${velocity.tool.version}</version>-->
+<!--        </dependency>-->
         <!--undertow容器-->
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-undertow</artifactId>
-        </dependency>
+<!--        <dependency>-->
+<!--            <groupId>org.springframework.boot</groupId>-->
+<!--            <artifactId>spring-boot-starter-undertow</artifactId>-->
+<!--        </dependency>-->
     </dependencies>
 
     <build>

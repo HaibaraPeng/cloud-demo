@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package nacos.console.exception;
+package com.alibaba.nacos.console.exception;
 
 import com.alibaba.nacos.common.model.RestResultUtils;
 import com.alibaba.nacos.common.utils.ExceptionUtil;

@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package nacos.console.controller;
+package com.alibaba.nacos.console.controller;
 
 import com.alibaba.nacos.config.server.service.repository.PersistService;
 import com.alibaba.nacos.naming.controllers.OperatorController;
