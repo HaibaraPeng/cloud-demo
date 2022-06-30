@@ -5,7 +5,7 @@
     <parent>
         <artifactId>demo-upms</artifactId>
         <groupId>com.roc</groupId>
-        <version>1.0.4</version>
+        <version>1.0.5</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
@@ -24,6 +24,11 @@
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-openfeign-core</artifactId>
             <optional>true</optional>
+        </dependency>
+        <!--mybatis 依赖-->
+        <dependency>
+            <groupId>com.roc</groupId>
+            <artifactId>demo-common-core</artifactId>
         </dependency>
     </dependencies>
 

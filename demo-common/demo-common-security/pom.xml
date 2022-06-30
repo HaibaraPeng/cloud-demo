@@ -5,7 +5,7 @@
     <parent>
         <artifactId>demo-common</artifactId>
         <groupId>com.roc</groupId>
-        <version>1.0.4</version>
+        <version>1.0.5</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
@@ -16,6 +16,11 @@
     </description>
 
     <dependencies>
+        <!--工具类核心包-->
+        <dependency>
+            <groupId>com.roc</groupId>
+            <artifactId>demo-common-core</artifactId>
+        </dependency>
         <!--UPMS API-->
         <dependency>
             <groupId>com.roc</groupId>
