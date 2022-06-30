@@ -14,10 +14,10 @@
  * limitations under the License.
  */
 
-package nacos;
+package com.alibaba.nacos;
 
+import com.alibaba.nacos.config.ConfigConstants;
 import lombok.extern.slf4j.Slf4j;
-import nacos.config.ConfigConstants;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.scheduling.annotation.EnableScheduling;
@@ -29,7 +29,7 @@ import org.springframework.scheduling.annotation.EnableScheduling;
  */
 @Slf4j
 @EnableScheduling
-@SpringBootApplication(scanBasePackages = "com.alibaba.nacos")
+@SpringBootApplication
 public class DemoNacosApplication {
 
 	public static void main(String[] args) {
