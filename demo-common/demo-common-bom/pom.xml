@@ -7,7 +7,7 @@
 
     <groupId>com.roc</groupId>
     <artifactId>demo-common-bom</artifactId>
-    <version>1.0.5</version>
+    <version>1.1.0</version>
     <packaging>pom</packaging>
 
     <name>demo-common-bom</name>
@@ -59,6 +59,11 @@
             <dependency>
                 <groupId>com.roc</groupId>
                 <artifactId>demo-common-security</artifactId>
+                <version>${demo.common.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.roc</groupId>
+                <artifactId>demo-common-datasource</artifactId>
                 <version>${demo.common.version}</version>
             </dependency>
             <!-- excel 导入导出 -->

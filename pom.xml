@@ -7,7 +7,7 @@
     <groupId>com.roc</groupId>
     <artifactId>cloud-demo</artifactId>
     <packaging>pom</packaging>
-    <version>1.0.5</version>
+    <version>1.1.0</version>
 
     <name>cloud-demo</name>
     <url>https://github.com/HaibaraPeng/cloud-demo</url>
@@ -20,6 +20,7 @@
         <module>demo-auth</module>
         <module>demo-visual</module>
         <module>demo-upms</module>
+        <module>demo-nacos</module>
     </modules>
 
     <properties>

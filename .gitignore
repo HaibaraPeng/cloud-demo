@@ -29,4 +29,5 @@ demo-gateway/target
 demo-auth/target
 demo-visual/*/target
 demo-common/*/target
+demo-nacos/target
 
